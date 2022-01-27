@@ -196,7 +196,7 @@ remoteDriver <-
       initialize =
         function(
                  remoteServerAddr = "localhost",
-                 port = 4444,
+                 port = 443,
                  browserName = "firefox",
                  path = "/wd/hub",
                  version = "",
@@ -214,7 +214,7 @@ remoteDriver <-
           javascript <<- javascript
           nativeEvents <<- nativeEvents
           extraCapabilities <<- extraCapabilities
-          serverURL <<- paste0("http://", remoteServerAddr, ":", port, path)
+          serverURL <<- paste0("https://", remoteServerAddr, ":", port, path)
           callSuper(...)
         },
       show = function() {
